@@ -99,9 +99,9 @@ class DDPGTrainer:
 
         self.logger.print_stats(rew_stats, touch_stats, won_stats, lost_stats)
         self.logger.info('Saving training statistics...')
-        # self.logger.plot_running_mean(list(rew_stats), 'Total reward', 'total-reward.pdf', show=False)
+        self.logger.plot_running_mean(list(rew_stats), 'Total reward', 'total-reward.pdf', show=False)
         self.logger.plot_intermediate_stats(eval_stats, show=False)
-        # self.logger.plot_running_mean(list(loss_stats), 'Loss', 'loss.pdf', show=False)
+        self.logger.plot_running_mean(list(loss_stats), 'Loss', 'loss.pdf', show=False)
         self.logger.save_model(agent, 'agent.pkl')
 
         print(eval_stats['won'])
