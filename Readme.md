@@ -47,3 +47,10 @@ To run the code and explore the implementation, follow these steps:
 4. Run the main script: `python ./train_agent.py`
 
 For additional details and customization options, refer to the documentation in the repository.
+
+## Team Members
+
+1. Aditya Sankhla (12140060)
+2. Aditya Dubey (12140100)
+3. Tushar Bansal (12141680)
+4. Rohit Aswani (12141390)
