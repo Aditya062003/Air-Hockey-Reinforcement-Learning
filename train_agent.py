@@ -7,8 +7,8 @@ import sys
 sys.path.insert(0, '.')
 sys.path.insert(1, '..')
 
-from ddpg.agent import DDPGAgent
-from ddpg.trainer import DDPGTrainer
+from agent import DDPGAgent
+from trainer import DDPGTrainer
 from utils import *
 
 parser = ArgumentParser()

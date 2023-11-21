@@ -6,7 +6,7 @@ from pathlib import Path
 import pickle
 from copy import deepcopy
 import os
-from ddpg.models import Actor, Critic
+from models import Actor, Critic
 from utils import soft_update
 
 sys.path.insert(0, '.')
