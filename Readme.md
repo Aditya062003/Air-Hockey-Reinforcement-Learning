@@ -8,7 +8,7 @@ Our trained reinforcement learning agents outperform the basic algorithmic oppon
 
 We explore solutions for both discrete and continuous action spaces, employing algorithms such as Deep Deterministic Policy Gradient (DDPG). This README provides a brief overview, and for a more in-depth understanding and access to the code implementation, refer to our GitHub repository.
 
-![Air Hockey](assets/demo.mov)
+<img src="DDPG/assets/demo.gif" alt="Air Hockey Demo" width="500"/>
 
 ## Algorithms Implemented
 
