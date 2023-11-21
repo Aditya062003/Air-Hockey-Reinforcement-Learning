@@ -146,13 +146,6 @@ class Logger:
             plt.show()
         plt.close()
 
-    def plot_running_mean(self, data, title, filename=None, show=True, v_milestones=None):
-        # data_np = np.asarray(data)
-        t1 = torch.tensor(data,requires_grad=True)
-        data_np = t1.detach().numpy()
-        mean = running_mean(data_np, 1000)
-        self._plot(mean, title, filename, show)
-
     def plot_evaluation_stats(self, data, eval_freq, filename):
         style = {
             'weak': 'dotted',
