@@ -46,18 +46,13 @@ class DDPGTrainer:
             first_time_touch = 1
             for step in range(100):
                 a1 = agent.act(ob, eps=epsilon)
-                if self._config['mode'] == 'defense':
-                    a2 = opponent.act(obs_agent2)
-                elif self._config['mode'] == 'shooting':
-                    a2 = [0, 0, 0, 0]
-                else:
-                    a2 = opponent.act(obs_agent2)
+                a2 = opponent.act(obs_agent2)
                 (ob_new, reward, done, _info) = env.step(np.hstack([a1, a2]))
                 touched = max(touched, _info['reward_touch_puck'])
-                current_reward = reward + 5 * _info['reward_closeness_to_puck'] - (1 - touched) * 0.1 + touched * first_time_touch * 0.1 * step
-
+                    current_reward = reward + 5 * _info['reward_closeness_to_puck'] - (1 - touched) * 0.1 
+                    + touched * first_time_touch * 0.1 * step
+                
                 total_reward += current_reward
-
                 first_time_touch = 1 - touched
                 agent.store_transition((ob, a1, current_reward, ob_new, done))
 
